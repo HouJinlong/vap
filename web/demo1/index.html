@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>vap测试体验1</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background: red;
+            margin: 0 ;
+            padding: 0;
+        }
+        #container{
+            width: 100%;
+        }
+        #container canvas{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>vap测试体验1</h1>
+    <div id="container"></div>
+    <script src="../dist/vap.js"></script>
+    <script>
+        console.log('Vap: ', Vap);
+       let Vap1 = Vap.default
+        window.onerror = (...e)=>{
+            console.log(e);
+        }
+        // https://github.com/Tencent/vap/tree/master/web
+        // 1
+        // new Vap1().play({
+        //     container: document.querySelector('#container'),
+        //     src: './video.mp4',
+        //     width: 736,
+        //     height: 880,
+        //     config: {"info":{"v":2,"f":80,"w":736,"h":576,"fps":24,"videoW":736,"videoH":880,"aFrame":[0,580,368,288],"rgbFrame":[0,0,736,576],"isVapx":0,"orien":0}},
+        //     fps: 24,
+        //     loop: true,
+        //     // 精准模式
+        //     precache:true,
+        //     mute: true,
+        // })
+        
+        // 2
+        let vap = new Vap1({
+            container: document.querySelector('#container'),
+            src: './video1.mp4',
+            width: 720,
+            height: 1558,
+            config: {"info":{"v":2,"f":80,"w":720,"h":1558,"fps":24,"videoW":1088,"videoH":1568,"aFrame":[724,0,360,779],"rgbFrame":[0,0,720,1558],"isVapx":0,"orien":0}},
+            fps: 24,
+            precache:true,
+            mute: true,
+            loop: true,
+        })
+    </script>
+</body>
+</html>

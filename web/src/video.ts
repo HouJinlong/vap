@@ -103,7 +103,7 @@ export default class VapVideo {
     if (!video) {
       video = this.video = document.createElement('video');
     }
-    video.crossOrigin = 'anonymous';
+    // video.crossOrigin = 'anonymous';
     video.autoplay = false;
     video.preload = 'auto';
     video.setAttribute('playsinline', '');
